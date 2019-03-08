@@ -202,7 +202,7 @@ int be_redis_aclcheck(void *handle, const char *clientid, const char *username, 
 		if (x >= acc)
 			answer = 1;
 
-		_log(MOSQ_LOG_ERR, "REDIS AUTH DEBUG user: %s - topic: %s - acc: %d x: %d\n", username, topic, acc, x)
+		_log(MOSQ_LOG_ERR, "REDIS AUTH DEBUG user: %s - topic: %s - acc: %d x: %d\n", username, topic, acc, x);
 	}
 	freeReplyObject(r);
 	return (answer) ? BACKEND_ALLOW : BACKEND_DEFER;
